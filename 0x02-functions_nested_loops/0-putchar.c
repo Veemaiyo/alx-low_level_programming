@@ -1,6 +1,23 @@
 #include "main.h"
-~/0x02$  gcc -Wall -pedantic -Werror -Wextra -std=gnu89 _putchar.c 0-putchar.c -o 0
--putchar
-~/0x02$ ./0-putchar
-_putchar
-~/0x02$
+
+/**
+ * main - prints _putchar
+ *
+ * Description: prints _putchar
+ *
+ * Return: 0 (Success)
+ */
+
+int main(void)
+{
+	char text[9] = "_putchar";
+	int i = 0;
+
+	for (i = 0; i < 8; i++)
+	{
+		_putchar(text[i]);
+	}
+	_putchar('\n');
+
+	return (0);
+}
