@@ -1,21 +1,40 @@
+#include <stdio.h>
 #include "main.h"
 
 /**
- * main - check the code
- *
- * Return: Always 0.
+ * print_number - name of the function
+ * if: conditional print
+ * @n: value of ingrese
+ * Return: none
  */
-int main(void)
+
+void print_number(int n)
 {
-    print_number(98);
-    _putchar('\n');
-    print_number(402);
-    _putchar('\n');
-    print_number(1024);
-    _putchar('\n');
-    print_number(0);
-    _putchar('\n');
-    print_number(-98);
-    _putchar('\n');
-    return (0);
+	if (n / 1000 != 0)
+	{
+		_putchar((n / 1000) + '0');
+		_putchar(((n / 100) % 10) + '0');
+		_putchar(((n / 10) % 10) + '0');
+		_putchar((n % 10) + '0');
+	}
+	else if (n < 0)
+	{
+		_putchar('-');
+		_putchar(((-n / 10) % 10) + '0');
+		_putchar((-n % 10) + '0');
+	}
+	else if (n / 100 != 0)
+	{
+		_putchar(((n / 100) % 10) + '0');
+		_putchar(((n / 10) % 10) + '0');
+		_putchar((n % 10) + '0');
+	}
+	else if (n / 10 != 0)
+	{
+		_putchar(((n / 10) % 10) + '0');
+		_putchar((n % 10) + '0');
+	}
+	else
+		_putchar((n % 10) + '0');
 }
+
