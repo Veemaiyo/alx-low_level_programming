@@ -1,24 +1,25 @@
+#include <stdio.h>
 #include "main.h"
 
 /**
-* print_line - check the code
-*@n: input
-* Return: Always 0.
-*/
+ * print_line - name of the function
+ * @n: value of ingrese
+ * Return: none
+ */
+
 void print_line(int n)
 {
-	int sum;
+	int c = 0;
 
-	if (n <= 0)
+	if (n > 0)
 	{
-		_putchar('\n');
+		while (c < n)
+		{
+			_putchar ('_');
+			c++;
+		}
+		_putchar ('\n');
 	}
 	else
-	{
-		for (sum = 0; sum < n; sum++)
-		{
-			putchar('');
-		}
 		_putchar('\n');
-	}
 }
