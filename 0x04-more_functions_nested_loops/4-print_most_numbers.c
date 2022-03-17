@@ -1,12 +1,20 @@
+#include <stdio.h>
 #include "main.h"
 
 /**
- * main - check the code
- *
- * Return: Always 0.
+ * print_most_numbers - name of the function
+ * Return: none
  */
-int main(void)
+
+void print_most_numbers(void)
 {
-    print_most_numbers();
-    return (0);
+	int cicle;
+
+	for (cicle = 0; cicle < 10; cicle++)
+	{
+		if (cicle != 4 && cicle != 2)
+		_putchar (cicle + '0');
+	}
+	putchar ('\n');
 }
+
