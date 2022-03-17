@@ -1,12 +1,19 @@
+#include <stdio.h>
 #include "main.h"
 
 /**
- * main - check the code
- *
- * Return: Always 0.
+ * print_numbers - name of the function
+ * for: cicle of print
+ * Return: none
  */
-int main(void)
+
+void print_numbers(void)
 {
-    print_numbers();
-    return (0);
+	int cont;
+
+	for (cont = 0; cont < 10; cont++)
+		_putchar (cont + '0');
+
+	_putchar ('\n');
 }
+
