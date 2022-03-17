@@ -1,13 +1,21 @@
-#include <stdio.h>
 #include "main.h"
-
 /**
- * _isupper - name of the function
- * @c: value of ingrese
- * Return: 1 if true and 0 is false
- */
-
+* _isupper - checks for uppercase character
+* @c: Variable text
+* Return: Always 0.
+*/
 int _isupper(int c)
 {
-	return (c >= 65 && c <= 90 ? 1 : 0);
-}		    
+
+
+	if (c >= 'A' && c <= 'Z')
+	{
+	return (1);
+	}
+	else
+{
+	return (0);
+}
+
+}
+
