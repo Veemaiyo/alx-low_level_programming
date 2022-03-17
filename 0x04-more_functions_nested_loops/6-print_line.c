@@ -1,18 +1,26 @@
+#include <stdio.h>
 #include "main.h"
 
 /**
- * print_line - print line
- *
- * Return: Always 0.
+ * print_line - name of the function
+ * @n: value of ingrese
+ * Return: none
  */
 
-void print_line(int n);
-
+void print_line(int n)
 {
-	int main(void)
-    print_line(0);
-    print_line(2);
-    print_line(10);
-    print_line(-4);
-    return (0);
-}    
+	int c = 0;
+
+	if (n > 0)
+	{
+		while (c < n)
+		{
+			_putchar ('_');
+			c++;
+		}
+		_putchar ('\n');
+	}
+	else
+		_putchar('\n');
+}
+    
