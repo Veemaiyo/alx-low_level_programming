@@ -1,17 +1,24 @@
 #include "main.h"
 
 /**
- * print_line -  checks for checks for a digit (0 through 9).
- * @n: n -  Variable
- * Return: Always 0.
- */
+* print_line - check the code
+*@n: input
+* Return: Always 0.
+*/
 void print_line(int n)
 {
-	char c;
+	int sum;
 
-		for (c = 0; c < n; c++)
+	if (n <= 0)
+	{
+		_putchar('\n');
+	}
+	else
+	{
+		for (sum = 0; sum < n; sum++)
 		{
 			_putchar('_');
 		}
-	_putchar('\n');
+		_putchar('\n');
+	}
 }    
