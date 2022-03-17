@@ -1,15 +1,27 @@
+#include <stdio.h>
 #include "main.h"
 
 /**
- * main - check the code
- *
- * Return: Always 0.
+ * more_numbers - name of the function
+ * Return: none
  */
 
-void more_numbers(void);
+void more_numbers(void)
 {
-int main(void)
+	int cicle;
+	int cont;
 
-    more_numbers();
-    return (0);
+	for (cont = 0; cont < 10; cont++)
+	{
+		for (cicle = 0; cicle < 15; cicle++)
+		{
+			if (cicle >= 10)
+			{
+				_putchar ((cicle / 10) + '0');
+			}
+			_putchar ((cicle % 10) + '0');
+		}
+		_putchar ('\n');
+	}
 }
+
