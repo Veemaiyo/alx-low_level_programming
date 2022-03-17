@@ -1,14 +1,17 @@
-#include "main.h"
 #include <stdio.h>
+#include "main.h"
 
 /**
- * main - check the code
- *
- * Return: Always 0.
+ * mul - name of the function
+ * @a: value of ingrese
+ * @b: value of ingrese
+ * Return: mul
  */
-int main(void)
+
+int mul(int a, int b)
 {
-    printf("%d\n", mul(98, 1024));
-    printf("%d\n", mul(-402, 4096));
-    return (0);
+	int c = a * b;
+
+	return (c);
 }
+
