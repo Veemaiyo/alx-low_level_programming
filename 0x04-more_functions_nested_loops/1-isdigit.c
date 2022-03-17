@@ -1,19 +1,14 @@
-#include "main.h"
 #include <stdio.h>
+#include "main.h"
 
 /**
- * main - check the code
- *
- * Return: Always 0.
+ * _isdigit - name of the function
+ * @c: value of ingrese
+ * Return: 1 if is a number, 0 if is otherwise
  */
 
-int main(void)
+int _isdigit(int c)
 {
-    char c;
-
-    c = '0';
-    printf("%c: %d\n", c, _isdigit(c));
-    c = 'a';
-    printf("%c: %d\n", c, _isdigit(c));
-    return (0);
+	return (c >= 48 && c <= 57 ? 1 : 0);
 }
+
