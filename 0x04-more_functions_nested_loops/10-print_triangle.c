@@ -1,15 +1,27 @@
+#include <stdio.h>
 #include "main.h"
 
 /**
- * main - check the code
- *
- * Return: Always 0.
+ * print_triangle - name of the function
+ * @size: value of ingrese
+ * Return: none
  */
-int main(void)
+
+void print_triangle(int size)
 {
-    print_triangle(2);
-    print_triangle(10);
-    print_triangle(1);
-    print_triangle(0);
-    return (0);
+	int row, column, k;
+
+	if (size <= 0)
+		_putchar('\n');
+
+	for (row = 0; row < size; row++)
+	{
+		for (column = size - row; column > 1; column--)
+			_putchar(' ');
+		for (k = row + column; k >= 1; k--)
+			_putchar('#');
+
+		_putchar('\n');
+	}
 }
+
