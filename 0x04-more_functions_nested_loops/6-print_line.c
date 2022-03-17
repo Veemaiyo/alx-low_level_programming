@@ -1,26 +1,17 @@
-#include <stdio.h>
 #include "main.h"
 
 /**
- * print_line - name of the function
- * @n: value of ingrese
- * Return: none
+ * print_line -  checks for checks for a digit (0 through 9).
+ * @n: n -  Variable
+ * Return: Always 0.
  */
-
 void print_line(int n)
 {
-	int c = 0;
+	char c;
 
-	if (n > 0)
-	{
-		while (c < n)
+		for (c = 0; c < n; c++)
 		{
-			_putchar ('_');
-			c++;
+			_putchar('_');
 		}
-		_putchar ('\n');
-	}
-	else
-		_putchar('\n');
-}
-    
+	_putchar('\n');
+}    
