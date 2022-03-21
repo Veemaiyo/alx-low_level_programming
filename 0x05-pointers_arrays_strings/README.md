@@ -1,0 +1,1 @@
+puinters and arrays strings
