@@ -1,16 +1,28 @@
- Function pointers$ gcc -Wall -pedantic -Werror -Wextra -std=gnu89 3-main.c 3-op_functions.c 3-get_op_func.c -o calc
-  Function pointers$ ./calc 1 + 1
-2
-Function pointers$ ./calc 97 + 1
-98
- Function pointers$ ./calc 1024 / 10
-102
- Function pointers$ ./calc 1024 '*' 98
-100352
-Function pointers$ ./calc 1024 '\*' 98
-Error
-Function pointers$ ./calc 1024 - 98
-926
- Function pointers$ ./calc 1024 '%' 98
-44
- Function pointers$
+#ifndef CALC_H
+#define CALC_H
+
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+
+/**
+ * struct op - Struct op
+ *
+ * @op: The operator
+ * @f: The function associated
+ */
+typedef struct op
+{
+	char *op;
+	int (*f)(int a, int b);
+} op_t;
+
+int op_add(int a, int b);
+int op_sub(int a, int b);
+int op_mul(int a, int b);
+int op_div(int a, int b);
+int op_mod(int a, int b);
+int (*get_op_func(char *s))(int, int);
+
+#endif
+
